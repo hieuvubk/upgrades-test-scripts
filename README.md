@@ -172,6 +172,9 @@ npm run test:gas
 
 # Test Cosmos SDK bank module
 npm run test:cosmos
+
+# Test MultiStaking precompile
+npm run test:multistaking
 ```
 
 ### Advanced Usage

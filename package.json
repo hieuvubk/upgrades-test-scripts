@@ -17,6 +17,7 @@
     "test:cosmos": "node scripts/test-cosmos-bank.js",
     "test:cosmos-connectivity": "node scripts/test-cosmos-connectivity.js",
     "test:derivation-paths": "node scripts/test-derivation-paths.js",
+    "test:multistaking": "npx hardhat run scripts/test-multistaking-precompile.js --network localhost",
     "test:comprehensive": "node scripts/run-comprehensive-tests.js",
     "compile": "npx hardhat compile",
     "node": "npx hardhat node",
