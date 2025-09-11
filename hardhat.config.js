@@ -28,6 +28,7 @@ module.exports = {
         PRIVATE_KEY !== "0x" + "0".repeat(64)
           ? [PRIVATE_KEY, PRIVATE_KEY_2]
           : [],
+      gas: 3000000,
     },
     testnet: {
       url: RPC_URL,
