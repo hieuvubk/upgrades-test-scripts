@@ -295,7 +295,14 @@ class ContractDeployer {
         // Test a transfer (to self)
         const transferAmount = ethers.parseUnits("100", decimals);
         const tx = await contract.transfer(deployer.address, transferAmount);
-        await tx.wait();
+        const receipt = await tx.wait();
+
+        console.log(`Transfer tx hash: ${tx.hash}`);
+
+        if (this.verbose) {
+            this.log(`  Transfer tx hash: ${tx.hash}`);
+            this.log(`  Transfer gas used: ${receipt.gasUsed.toString()}`);
+        }
 
         const newBalance = await contract.balanceOf(deployer.address);
         if (newBalance !== deployerBalance) {
